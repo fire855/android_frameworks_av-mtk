@@ -57,7 +57,7 @@ void GraphicBufferSource::PersistentProxyListener::onFrameAvailable(
         if (consumer == NULL) {
             return;
         }
-        BufferItem bi;
+        BufferQueue::BufferItem bi;
         status_t err = consumer->acquireBuffer(&bi, 0);
         if (err != OK) {
             ALOGE("PersistentProxyListener: acquireBuffer failed (%d)", err);
